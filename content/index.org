@@ -1,0 +1,3 @@
+#+TITLE: Posts
+
+- [[file:20250428T220017--test-post__philosophy.org][Test Post]]

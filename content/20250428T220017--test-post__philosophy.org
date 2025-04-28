@@ -1,0 +1,19 @@
+#+title:      Test Post
+#+date:       [2025-04-28 Mon 22:00]
+#+filetags:   :philosophy:
+#+identifier: 20250428T220017
+
+This is just a test.
+
+#+begin_src python
+  def fun():
+      print("super fun")
+#+end_src
+
+\[
+  E=mc^2
+\]
+
+[[file:img/foo.png]]
+
+More test.
