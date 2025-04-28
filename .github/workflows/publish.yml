@@ -1,0 +1,23 @@
+# ~/.github/workflows/publish.yml
+name: Publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Emacs
+        run: sudo apt-get install -y emacs-nox
+      - name: Build
+        run: ./build.sh
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: main        # deploy into main (for user/orga page)
+          publish_dir: public         # take contents of public/
+          keep_files: true            # ← keep your content/, .github/, build-site.el, etc.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
